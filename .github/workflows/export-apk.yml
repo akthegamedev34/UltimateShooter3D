@@ -15,7 +15,7 @@ jobs:
 
       - name: Download Godot headless
         run: |
-          curl -L -o godot.zip https://downloads.tuxfamily.org/godotengine/4.2.2/Godot_v4.2.2-stable_linux_headless.64.zip
+          curl -L -o godot.zip https://mirror.clarkson.edu/godotengine/4.2.2/Godot_v4.2.2-stable_linux_headless.64.zip
           unzip godot.zip
           mv Godot_v4.2.2-stable_linux_headless.64 godot
           chmod +x godot
@@ -23,7 +23,7 @@ jobs:
       - name: Download Android export templates
         run: |
           mkdir -p ~/.local/share/godot/templates/4.2.2.stable
-          curl -L -o templates.tpz https://downloads.tuxfamily.org/godotengine/4.2.2/Godot_v4.2.2-stable_export_templates.tpz
+          curl -L -o templates.tpz https://mirror.clarkson.edu/godotengine/4.2.2/Godot_v4.2.2-stable_export_templates.tpz
           tar -xf templates.tpz -C ~/.local/share/godot/templates/4.2.2.stable
 
       - name: Export APK
