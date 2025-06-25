@@ -6,21 +6,23 @@ on:
 
 jobs:
   export:
-    name: Export APK
+    name: Build Android APK
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Godot exporter
-        uses: firebelley/godot-export@v4
+      - name: Export Android build
+        uses: firebelley/godot-export@v6.0.0
         with:
-          godot-version: 4.2.2
-          export-preset: "Android"
-          use-godot-export-templates: true
+          godot_executable_download_url: https://downloads.tuxfamily.org/godotengine/4.2.2/Godot_v4.2-stable_linux_headless_64.zip
+          godot_export_templates_download_url: https://downloads.tuxfamily.org/godotengine/4.2.2/Godot_v4.2-stable_export_templates.tpz
+          relative_project_path: './'
+          cache: true
+          archive_output: false
 
-      - name: Upload APK
+      - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
           name: UltimateShooter-APK
