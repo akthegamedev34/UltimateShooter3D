@@ -14,11 +14,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set up Godot exporter
-        uses: crisbueno/godot-export@v5
+        uses: firebelley/godot-export@v4
         with:
-          godot-version: 4.2.1
+          godot-version: 4.2.2
           export-preset: "Android"
-          output-path: "UltimateShooter.apk"
           use-godot-export-templates: true
 
       - name: Upload APK
