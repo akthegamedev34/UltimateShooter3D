@@ -1,0 +1,14 @@
+[gd_resource type="ConfigFile" load_steps=2 format=2]
+
+[application]
+
+config/name="UltimateShooter"
+run/main_scene="scenes/Lobby.tscn"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/size/test_width=1280
+window/size/test_height=720
+window/vsync/use_vsync=true
